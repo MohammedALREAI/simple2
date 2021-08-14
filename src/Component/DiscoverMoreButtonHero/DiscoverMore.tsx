@@ -4,7 +4,7 @@ import { DiscoverButton } from "./Discover.style";
 
 export const DiscoverMore = () => {
     return (
-        <DiscoverButton className="mt-8">
+        <DiscoverButton className="mt-8 ">
 <a className='animated-arrow flex justify-start items-center'>
     <span className='the-arrow -left hover:m-12'>
       <span className='shaft hover:m-12'></span>

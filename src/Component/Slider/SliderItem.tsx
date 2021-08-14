@@ -7,7 +7,7 @@ import { DiscoverMore } from "../DiscoverMoreButtonHero/DiscoverMore";
 }
 
 export const SliderItem = ({ description, image, location }: PropsSliderItem) => (
-<SliderItemWrapper imag={image} className="z-10  flex flex-col justify-end" >
+<SliderItemWrapper imag={image} className="z-10  flex flex-col justify-end w-full h-full bg-black" >
   <SubWrapper className=" z-50 flex justify-between  pl-20 ">
     <SubRow className="flex  w-1/3">
       <div className="flex items-start">
@@ -23,11 +23,13 @@ export const SliderItem = ({ description, image, location }: PropsSliderItem) =>
     </div>
 </div>
   </SubRow>
-  <div className="relative left-0 justify-center  mt-16 z-50 hidden md:flex">
+  {/* <div className="relative left-0 justify-center  mt-16 z-50 hidden md:flex">
 <BoxBolit className="bg-gray-900 z-50">
 <SpanBox className="flex justify-end items-">BOLLING A VISIT</SpanBox>
 </BoxBolit>
-</div>  </SubWrapper>
+</div>  */}
+
+ </SubWrapper>
 
 </SliderItemWrapper>
 );

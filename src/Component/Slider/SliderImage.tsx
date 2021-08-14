@@ -5,8 +5,8 @@ import { SliderItemWrapper, WrapperMe } from "./Slider.style";
 
 const cssStyle: CSSProperties = {
     position: "relative",
-    // width: "100%",
-    // height: "100%",
+    width: "100%",
+    height: "100%",
 };
 
 interface props {

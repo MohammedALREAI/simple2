@@ -13,7 +13,11 @@ export const Progressbar = ({ title, value, textshow }: Props) => {
         y: 70,
     };
     return (
-    <div className="w-full flex flex-col" style={{ width: "70%" }}>
+    <div className="w-full flex flex-col" style={{
+ width: "70%",
+    boxShadow: "0 0 0 1px #ffffff inset",
+
+     }}>
      <h1 className="float-left text-white mb-1 " >{"Gallery City Cente"}</h1>
      <div className="relative flex flex-col items-center group">
 <div className="absolute bottom-0 flex flex-col items-center   group-hover:flex">

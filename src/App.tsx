@@ -13,15 +13,22 @@ import { Tabs } from "./Component/Tab/Tabs";
 import { KnowSection } from "./Component/knowSection.tsx/KnowSection";
 function App() {
      return (
-          <div className="App bg-white-200 container mx-auto">
-               <Slider/>
-               <KnowSection/>
-               <Tabs/>
-               <Apartment/>
-               <Penthouse/>
-               <AllListItems />
-               <MailSection />
-               <EverySection/>
+          <div style={{
+               display: "flex",
+               flexDirection: "column",
+               justifyContent: "start",
+               alignItems: "start",
+               width: "100%",
+               margin: "0px auto",
+          }}>
+               {/* <Slider/> */}
+               {/* <MailSection /> */}
+           <KnowSection/>
+                {/* <Tabs/> */}
+               {/* <Apartment/> */}
+               {/* <Penthouse/> */}
+               {/* <AllListItems /> */}
+               {/* <EverySection/>  */}
           </div>
      );
 }

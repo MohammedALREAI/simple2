@@ -6,7 +6,7 @@ export const DiscoverButton = styled("div")`
     justify-content: space-between;
     align-content: space-between;
     align-items: center;
-font-size: 1.14rem;
+font-size: 1.2rem;
 margin-right: 2em;
 
 color: #ffffff;
@@ -82,12 +82,11 @@ color: #ffffff;
   background-color: white;
   content: "";
   display: block;
-  height: 2px;
+  height: 1px;
   position: absolute;
   top: 0;
   right: 0;
   transition: all 0.2s;
-
   transition-delay: 0;
 }
 .the-arrow > .shaft:before {
@@ -110,6 +109,8 @@ color: #ffffff;
 }
 .animated-arrow:hover {
   color: #ba9778;
+  transition-delay: 0.1s;
+
 }
 .animated-arrow:hover > .the-arrow.-left > .shaft {
   width: 50px;
@@ -122,13 +123,14 @@ color: #ffffff;
   width: 12px;
   color: #ba9778;
   background-color: #ba9778;
-
-  transition-delay: 0.1s;
+  transition-delay: 0.3s;
 }
 .animated-arrow:hover > .the-arrow.-left > .shaft:before {
   transform: rotate(40deg);
-  background-color: #ba9778;
   color: #ba9778;
+  /* background: red; */
+  transition-delay: 0.1s;
+
 }
 .animated-arrow:hover > .the-arrow.-left > .shaft:after {
   transform: rotate(-40deg);
@@ -148,7 +150,7 @@ color: #ffffff;
 .animated-arrow:hover > .main > .the-arrow.-right > .shaft:before,
 .animated-arrow:hover > .main > .the-arrow.-right > .shaft:after {
   width: 0;
-  transition-delay: 0;
+  transition-delay: 1;
   transition: all 0.1s;
 }
 .animated-arrow:hover > .main > .the-arrow.-right > .shaft:before {

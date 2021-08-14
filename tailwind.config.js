@@ -1,5 +1,6 @@
 module.exports = {
-  purge: ["/src/**.tsx","**.tsx"],
+  purge: ["/src/**.tsx", "**.tsx"],
+  mode: "jit",
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {},
@@ -10,5 +11,5 @@ module.exports = {
   plugins: [],
   future: {
     purgeLayersByDefault: true,
-  }
-}
+  },
+};

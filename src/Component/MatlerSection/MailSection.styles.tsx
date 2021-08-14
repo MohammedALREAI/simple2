@@ -1,20 +1,21 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export const TextDescription = styled("p")`
-     font-size: 1.334rem;
-     text-align: start !important;
+     font-size: 1.2rem;
+     opacity: 0.7;
+     text-align: start;
      margin-top: 1.6em;
      font-weight: 300;
-     font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
+          font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
      line-height: 1.6;
-     clear: both;
+    margin-top: 1.6em;
 `;
 
 export const SpinnerContainer = styled.div`
   display: inline-block;
   width: 60px;
   height: 60px;
-  border: 6px solid #fcdd06;
+  border: 6px solid #f0ebce;
   box-sizing: border-box;
   border-radius: 50%;
   border-top-color: #c5a7a7;
@@ -32,8 +33,19 @@ export const SpinnerContainer = styled.div`
     }
   }
 `;
+
+const pulse = keyframes`
+50% {
+          transform: translateY(10px);
+          opacity: 0.7;
+     }
+     100% {
+          transform: translateY(-10px);
+          opacity: 1;
+     }
+`;
 export const ButtonDiscover = styled("button")`
-     margin-top: 3rem;
+     margin-top: 4rem;
      line-height: 1;
      font-size: 1.14rem;
      cursor: pointer;
@@ -48,23 +60,17 @@ export const ButtonDiscover = styled("button")`
      display: flex;
      align-items: center;
      text-transform: uppercase;
-     box-shadow: 0 0 0 3em #7a7571 inset;
      color: #ffffff;
-     &:hover{
-     animation: pulse 1s 2s 3 alternate backwards !important;
-     @keyframes pulse {
-     50% {
-          transform: translateY(10px);
-          opacity: 0.7;
-     }
-     100% {
-          transform: translateY(-10px);
-          opacity: 1;
-     }
-}}
-span{
-width:2rem;
-}
+     background: #ba9778 ;
+     outline: none;
+     border: 0;
+     transition: all 300ms ease;
+     &:hover {
+     /* animation: ${pulse} 1s 2s 3 alternate backwards !important;
+      */
+     animation: ${pulse} 2s ease-in 1 ;
+
+      }
 `;
 export const HR = styled.hr`
  color: #ba9778;

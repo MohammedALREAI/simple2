@@ -1,32 +1,29 @@
 import { Titre } from "./../ProgressBar/tooltip.style";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 export const WrapperImageKnow = styled("div")`
  background: url("https://nestin.bold-themes.com/fancy/wp-content/uploads/sites/3/2020/01/background_01.jpg");
   /* background-position: 50% 108.001px; */
   background-repeat: no-repeat;
- min-height: 900px;
-  height: auto;
-  width: 100%;
-  object-fit: fill;
+  height: 885.281px;
+    max-height: 885.281px;
+     max-width: 1326px;
+     min-width: 1326px;
+      object-fit: fill;
+      width: 1326px;
   text-align: start;
   background-position: center center !important;
   .text{
 box-sizing: border-box;
-  padding: 0;
-  margin: 0;
   color: white;
   background-repeat: no-repeat;
   font-size: 3rem;
   font-weight: 500;
   }
   .subText {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
   color: white;
   background-repeat: no-repeat;
-  font-size: 1rem;
-  font-weight: 300;
+  font-size: 1.3rem;
+  font-weight: 400;
   margin: 40px 0px;
 }
 @media only screen and (max-width: 600px) {
@@ -73,4 +70,31 @@ export const TitreProgress = styled(Titre)`
     background: rgb(186, 151, 120);
     margin-top: -8px;
     transform: rotate(-45deg);
+`;
+
+interface progressAnimated{
+  value:number,
+}
+export const animatedProgress = (y:number) => keyframes`
+0%{
+      width: 0%;
+    }
+    25%{
+        width:  ${y >= 25 ? 25 : y}%;
+    }
+    50%{
+      width:  ${y >= 50 ? 50 : y}%;
+    }
+    75%{
+      width:  ${y >= 75 ? 75 : y}%;
+    }
+    100%{
+      width:  ${y >= 100 ? 100 : y}%;
+    }
+
+`;
+
+export const ProgressAnimated = styled("div")<progressAnimated>`
+
+animation : ${props => animatedProgress(props.value)} 3s linear;
 `;

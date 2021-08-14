@@ -2,8 +2,10 @@ import { SubTitleListItem } from "./../ListiItems/ListItem.styles";
 import styled, { keyframes } from "styled-components";
 
 export const Image = styled("img")`
-width: 580px;
-height:500px;
+width: 100%;
+max-width: 500px;
+height: auto;
+max-height:500px;
 object-fit: fill;
 `;
 
