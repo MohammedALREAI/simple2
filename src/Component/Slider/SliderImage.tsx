@@ -1,12 +1,14 @@
 import React, { useState, CSSProperties } from "react";
 import SwipeableViews from "react-swipeable-views";
 import { data } from "./image";
-import { SliderItemWrapper, WrapperMe } from "./Slider.style";
+import { SliderItemJustImage, WrapperMe } from "./Slider.style";
 
 const cssStyle: CSSProperties = {
     position: "relative",
     width: "100%",
     height: "100%",
+    overflow: "hidden !important",
+
 };
 
 interface props {
@@ -31,13 +33,16 @@ export const SliderImage = ({ jc } : props) => {
     const sliders =
         data.length &&
         data.map((item, index) => (
-            <SliderItemWrapper imag={item.image} />
+            <SliderItemJustImage className="overflow-hidden" imag={item.image} style={{
+                    overflow: "hidden !important",
+
+            }} />
         ));
 
     return (
 
-                <div className="">
-                    <SwipeableViews index={sliderIndex} style={cssStyle}>
+                <div className="overflow-hidden">
+                    <SwipeableViews index={sliderIndex} style={cssStyle} slideStyle={{ overflow: "hidden" }}>
                         {sliders}
                     </SwipeableViews>
                     <div className=" ">

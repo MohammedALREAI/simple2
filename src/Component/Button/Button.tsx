@@ -9,7 +9,7 @@ icon?:ReactNode
 
 export const Button = ({ text, className, icon }: Props) => {
     return (
-        <ButtonStyle className={` w-full h-full flex items-center ${className}`}>
+        <ButtonStyle className={`flex items-center ${className}`}>
             {text}
             {icon || <span className="mx-4">&#10141;</span>
             }

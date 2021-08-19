@@ -4,30 +4,26 @@ export const WrapperImageKnow = styled("div")`
  background: url("https://nestin.bold-themes.com/fancy/wp-content/uploads/sites/3/2020/01/background_01.jpg");
   /* background-position: 50% 108.001px; */
   background-repeat: no-repeat;
-  height: 885.281px;
-    max-height: 885.281px;
-     max-width: 1326px;
-     min-width: 1326px;
+  min-height: auto;
+     /* max-width: 1326px; */
+     min-width: 100%;
       object-fit: fill;
-      width: 1326px;
+      width: 100%;
+
+
+      height: auto;
   text-align: start;
+  margin-bottom: 14rem;
   background-position: center center !important;
-  .text{
-box-sizing: border-box;
-  color: white;
-  background-repeat: no-repeat;
-  font-size: 3rem;
-  font-weight: 500;
-  }
   .subText {
   color: white;
   background-repeat: no-repeat;
   font-size: 1.3rem;
   font-weight: 400;
-  margin: 40px 0px;
+
 }
 @media only screen and (max-width: 600px) {
-  .text {
+  .text { 
     font-size: 2rem;
 }
 }
@@ -40,10 +36,17 @@ display: block;
     position: relative;
     text-align: start;
     font-weight: 500;
-    font-size: 5em;
-    height: 1.2em;    
-    font-family: "Vidaloka", Arial, Helvetica, sans-serif;
-    color: #ba9778;
+    color: #ba9778; 
+    font-size: 75px;
+    height: 90px;
+    text-transform: uppercase;
+    line-height: 75px;
+    font-family: Oswald, Arial, Helvetica, sans-serif;
+
+    @media (max-width: 640px) {
+      font-size: 70px;
+
+    }
 
 `;
 
@@ -53,21 +56,45 @@ interface Title{
   fw?:number
 }
 
-export const Subtitle = styled(Title)<Title>`
+export const Subtitle = styled("h5")<Title>`
     display: block;
     line-height: 1.7;
     display: block;
-    font-size: 1rem;
-    line-height: 1.7;
-    color: #191919;
+    line-height: 30px;
+    color: rgb(25, 25, 25);
+    letter-spacing: 1px;
     margin:20px 0px;
-color:  ${(props) => props.color ? props.color : ""};
-font-size : ${(props) => props.color ? props.color : ""};
-font-weight:${(props) => props.fw ? props.fw : ""};
-
+    text-transform: uppercase;
+    font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
+    line-height: 25.5px;
+    margin: 0px 0px 8.625px;
+    line-height: 20.7px;
+    color: #191919; 
+    font-size: 17.25px;
+    font-family: Oswald, Arial, Helvetica, sans-serif;
 `;
+
+export const SubSubtitle = styled(Subtitle)`
+    display: block;
+    line-height: 1.7;
+    display: block;
+    line-height: 30px;
+    color: rgb(25, 25, 25);
+    letter-spacing: 1px;
+    margin:20px 0px;
+    line-height: 25.5px;
+    margin: 0px 0px 8.625px;
+    color: #191919; 
+    font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    height: 24px;
+line-height: 25.5px;
+`;
+
 export const TitreProgress = styled(Titre)`
     background: rgb(186, 151, 120);
+    
     margin-top: -8px;
     transform: rotate(-45deg);
 `;

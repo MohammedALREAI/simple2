@@ -3,7 +3,7 @@ export const WrapperTabs = styled("div")`
 font-size: 1.1em;   
  line-height: 1.15;
 width: 100%;
-height: 100%;
+height: auto;
 font-weight: 400;  
 padding-bottom: 1rem;
   cursor: auto;

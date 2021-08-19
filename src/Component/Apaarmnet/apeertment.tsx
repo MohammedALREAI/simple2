@@ -9,26 +9,25 @@ import { Button } from "../Button/Button";
 
 function Apartment() {
     return (
-            <div style={{
-                    backgroundColor: "#f1f1f1",
-
-            }} className=" container   w-full h-full flex dark:bg-gray-800 shadow mx-auto">
-                <div className="w-1/2 mt-12 pl-8 pr-24">
+            <div className="px-12 container mx-6 mr-4 md:mx-auto  bg-[#f1f1f1]  flex flex-col w-full h-full lg:flex-row shadow-sm "
+            // style={{ margin: "0 auto" }}
+            >
+                <div className="w-1/1 lg:w-1/2 mt-12">
                 <HeaderTitle title="APARTMENT TYPE" className="text-base"/>
                 <TitleHeadAppp>03/
                     <br/>
                     Bedroom</TitleHeadAppp>
-                    <div className="flex flex-col mt-8">
+                    <div className="flex flex-col  ">
                         {Array(4).fill(0).map(c => (
                             <ListItems icon={AiFillCar} text={"BEDROOM"} value={3}/>
                         ))}
                     </div>
-                    <div className=" w-1/2 h-16 my-12">
-                    <Button text="SCHEDULE A VISIT"/>
+                    <div className="my-12" style={{ width: "191px", height: "50px" }}>
+                    <Button className="text-[15px]" text="SCHEDULE A VISIT"/>
                     </div>
 
             </div>
-            <div className=" w-2/3 z-50 mt-8 z-50 -ml-20 relative left-12">
+            <div className=" lg:w-2/3 sm:block right-0  md:right-[-10%]  mt-8 z-50  md:relative">
                 <SliderImage/>
         </div>
                 </div>

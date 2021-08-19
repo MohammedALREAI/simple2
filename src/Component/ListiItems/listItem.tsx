@@ -23,9 +23,9 @@ export const ListItem = ({ index, icon, subTitle, title, description, delay }: L
      });
      return transitions(
           (styles, item) => item &&
-          <animated.div style={styles}>
-          <WrapperListItem className="flex-col container mx-auto" index={index}>
-               <ImageWrapListItem className="mb-12" index={index}>{icon}</ImageWrapListItem>
+          <animated.div style={styles} className="min-w-[219px]">
+          <WrapperListItem className=" p-[2rem] flex-col " index={index}>
+               <ImageWrapListItem className="-mb-4" index={index}>{icon}</ImageWrapListItem>
                <TitleListItem className="font-bold" index={index}>{title}</TitleListItem>
                <SubTitleListItem className="subtitle" index={index}>{subTitle}</SubTitleListItem>
                <DescriptionTitleListItem index={index}>{description}</DescriptionTitleListItem>

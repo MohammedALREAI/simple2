@@ -11,9 +11,8 @@ const cssStyle: CSSProperties = {
     // background: "red",
     height: "885.281px",
     maxHeight: "885.281px",
-     maxWidth: "1326px",
-     minWidth: "1326px",
-     overflow: "hidden",
+    maxWidth: "1326px",
+    minWidth: "1326px",
 
 };
 
@@ -44,32 +43,24 @@ export const Slider = () => {
             />
         ));
 
-    const BoxSize = () => (
-        <div className=" justify-center  mt-16 z-50 hidden md:flex">
-            <BoxBolit>
-                <SpanBox className="flex justify-end items-center">BOLLING A VISIT</SpanBox>
-            </BoxBolit>
-        </div>);
-
     return (
 
-        <WrapperMe className="container mx-auto mb-32   w-full">
+        <WrapperMe className="container mx-auto mb-32   w-full bg-white">
             <div className="h-full w-full relative">
                 <SwipeableViews index={sliderIndex} style={cssStyle}>
                     {sliders}
                 </SwipeableViews>
 
-                <WrapperRight style={{
-                }}>
-                <SpanBox className="flex justify-end items-center">BOLLING A VISIT</SpanBox>
+                <WrapperRight className=" bg-gray-800" >
+                    <SpanBox className="flex justify-end items-center">BOLLING A VISIT</SpanBox>
                 </WrapperRight>
             </div>
-                <ArrowsWrapper className="space-x-5 relative">
-                    <span className=" text-7xl text-white cursor-pointer" style={{
-                          transform: "rotate(-180deg)",
-                          }} onClick={handleLeft} >&#10141;</span>
-                    <span className=" text-7xl text-white cursor-pointer" onClick={handleRight}>&#10141;</span>
-                </ArrowsWrapper>
+            <ArrowsWrapper className="space-x-5 relative flex justify-center items-center  h-[14px]">
+                <span className=" h-[12px] w-[34px] text-white cursor-pointer flex items-center" style={{
+                    transform: "rotate(-180deg)",
+                }} onClick={handleLeft} >&#10141;</span>
+                <span className="text-white  w-[34px] h-[12px] cursor-pointer  flex items-center" onClick={handleRight}>&#10141;</span>
+            </ArrowsWrapper>
         </WrapperMe>
     );
 };

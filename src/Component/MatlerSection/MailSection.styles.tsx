@@ -47,23 +47,28 @@ const pulse = keyframes`
 export const ButtonDiscover = styled("button")`
      margin-top: 4rem;
      line-height: 1;
-     font-size: 1.14rem;
+     font-weight: 300;
      cursor: pointer;
      letter-spacing: 1px;
      font-weight: 400;
+     outline: none;
+    border: 1px solid;
      transition: all 200ms ease;
      text-align: start;
-     width: 70%;
-     height: 4rem;
-     padding: 1.2rem;
+     width: 270px;
      text-align:start;
      display: flex;
      align-items: center;
      text-transform: uppercase;
      color: #ffffff;
      background: #ba9778 ;
+     padding: 20px;
      outline: none;
      border: 0;
+color: #ffffff; 
+font-family: Oswald, Arial, Helvetica, sans-serif;
+font-size: 17.1px;
+font-weight: 300;
      transition: all 300ms ease;
      &:hover {
      /* animation: ${pulse} 1s 2s 3 alternate backwards !important;
@@ -73,12 +78,12 @@ export const ButtonDiscover = styled("button")`
       }
 `;
 export const HR = styled.hr`
- color: #ba9778;
-  fill: #ba9778;
-  background: #ba9778;
-  margin-right: 1rem;
-  width: 4rem;
-  height: 4px;
+ color: #BA9778;
+  fill: #BA9778;
+  background: #BA9778;
+  height: 2px;
+  transition: 800ms cubic-bezier(.15,.75,.5,1);
+
 
 `;
 export const TitleHead = styled.h2`
@@ -91,13 +96,11 @@ font-weight: 500;
 `;
 
 export const TextLuxury = styled.h2`
-     font-weight: 700;
+     font-weight: 500;
      text-align: start !important;
      line-height: 1.2;
      margin: 0;
-     padding-left: 1rem;
-     font-family: "Oswald, Arial, Helvetica, sans-serif";
-     font-size: 4.3rem;
+     font-family: "Vidaloka",Arial,Helvetica,sans-serif;
      margin-bottom: 1rem;
      letter-spacing: 1px;
 

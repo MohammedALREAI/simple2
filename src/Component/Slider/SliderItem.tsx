@@ -13,8 +13,8 @@ export const SliderItem = ({ description, image, location }: PropsSliderItem) =>
       <div className="flex items-start">
       <HR className="pr-4"/>
     <div className="flex flex-col">
-      <SliderTitle className="uppercase text-white font-bold mb-4">{location}</SliderTitle>
-      <SliderSubTitle className="  text-white">{description.split(" ")[0]}</SliderSubTitle>
+      <SliderTitle className="text-[16.5px] lg:text-[20.1px] mb-[35px] text-white font-[500] ">{location}</SliderTitle>
+      <SliderSubTitle className="text-white text-[80px]">{description.split(" ")[0]}</SliderSubTitle>
       <SliderSubTitle className="  text-white">{description.split(" ").slice(1).join(" ") }</SliderSubTitle>
       <DiscoverMore/>
       {/* <DisscoverMore className="text-white text-left mt-6 flex h-12 spanitem">Discover More

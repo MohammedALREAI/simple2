@@ -4,8 +4,8 @@ import { TitleHead } from "../MatlerSection/MailSection.styles";
 import { SliderImage } from "../Slider/SliderImage";
 import { TitleHeadAppp } from "./apartment.style";
 import { ListItems } from "./ListItems";
-import { AiFillCar } from "react-icons/ai";
 import { Button } from "../Button/Button";
+import { AiFillCar } from "react-icons/ai";
 
 const style:React.CSSProperties = {
     width: "807px",
@@ -14,30 +14,29 @@ const style:React.CSSProperties = {
     opacity: 1,
     height: "600px",
 };
+
 function Penthouse() {
     return (
-        <>
-            <div style={{
-                    backgroundColor: "#f1f1f1",
-            }} className="container mx-auto w-full h-full flex  bg-white-200 mt-12 dark:bg-gray-800 shadow ">
-            <div className=" w-2/3 z-50 -ml-20 relative left-12 mt-24">
+            <div className="px-12 container mx-auto my-[70px]   bg-[#f1f1f1]  flex flex-col w-full h-full lg:flex-row shadow">
+            <div className=" lg:w-2/3 sm:block  md:left-[-10%] md:right-[20%]  mt-8 z-50  relative">
                 <SliderImage jc="flex-end"/>
         </div>
-                <div className="w-1/2 mt-12 p-8 pr-24 relative left-12 mt-32">
+                <div className="w-1/1 lg:w-1/2 mt-12 ">
                 <HeaderTitle title="APARTMENT TYPE" className="text-base"/>
                 <TitleHeadAppp>Penthouse</TitleHeadAppp>
-                    <div className="flex flex-col mt-8">
+                    <div className="flex flex-col  ">
                         {Array(4).fill(0).map(c => (
                             <ListItems icon={AiFillCar} text={"BEDROOM"} value={3}/>
                         ))}
                     </div>
-                    <div className="w-1/2 h-16 my-12">
+                    <div className="my-12" style={{ width: "202px", height: "53px" }}>
                     <Button text="SCHEDULE A VISIT"/>
                     </div>
 
             </div>
-                </div>
-        </>
+
+</div>
+
     );
 }
 export default Penthouse;

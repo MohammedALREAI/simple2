@@ -42,6 +42,31 @@ object-fit: contain;
   opacity: 1;
 
 `;
+export const SliderItemJustImage = styled("div")<SliderItemWrapperProps>`
+background-image: ${(props) => props.imag ? `url(${props.imag})` : ""};
+background-repeat: no-repeat;
+background-size: 100% 100%;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    z-index: 998;
+    opacity: 0;
+    height: 600px;
+    transition: opacity 600ms ease-out 0s;
+width: 1326px;
+ height: 600px;
+ /* width:100%; */
+ /* height:100%; */
+object-fit: contain;
+ max-width:1326px;
+min-width:1326px;
+max-height: 885.281px; 
+
+    transition: opacity 600ms ease-out 0s;
+  opacity: 1;
+  z-index: 999
+
+`;
 
 export const ArrowsWrapper = styled("div")`
           z-index: auto;
@@ -63,8 +88,8 @@ font-size: 1.067rem;
   text-align: start;
     color: #ffffff;
     transition:all 30ms ease;
-
-
+    font-family: "Vidaloka",Arial,Helvetica,sans-serif;
+    transition: all 30ms ease;
 `;
 export const SliderSubTitle = styled(SliderTitle)`
   font-size: 3rem;
@@ -72,7 +97,7 @@ export const SliderSubTitle = styled(SliderTitle)`
   line-height: 1.2;
   font-weight: 500;
   transition:all 30ms ease;
-
+  font-family: "Vidaloka",Arial,Helvetica,sans-serif;
   
 `;
 
@@ -145,9 +170,9 @@ export const WrapperMe = styled("div")`
       justify-content: space-evenly;
       align-items: flex-start;
       overflow: hidden;
-      width: 1326px;
+      width: 100%;
       height: 885.281px;
-      max-height: 885.281px;
+      max-height: 882px;
       max-width:1326px;
       min-width:1326px;
        margin-top: 50px;
@@ -185,6 +210,8 @@ writing-mode: vertical-rl;
   text-orientation: mixed;
   background-color: #ba9778;
   color: #ffffff;
+  font-size: 22px;
+  font-weight: 300;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -231,6 +258,8 @@ writing-mode: vertical-rl;
   box-shadow: 0 0 0 3em #ba9778 inset;
   position: absolute;
   top: 75%;
+  min-height: 164px;
+  min-width: 70px;
   z-index: 30;
   right: -0;
   /* right:-2rem;  */

@@ -1,22 +1,11 @@
 import React from "react";
-import { FirstCircle, SecondCircle, WrapperCircle } from "./tooltip.style";
+import { BoxCircle, FirstCircle, SecondCircle } from "./tooltip.style";
 
 interface Props {
-value:number,
-color:string,
-bg:string
+isActive?:boolean,
+value:string
 }
 
-export const CircleAnimation = ({ value, color, bg }: Props) => {
-    return (
-        <WrapperCircle style={{
-          zIndex: 20,
- color: `${color}`,
-        background: `${bg}`,
-        }}>
-          {50}
-        <FirstCircle/>
-        <SecondCircle/>
-      </WrapperCircle>
-    );
+export const CircleAnimation = ({ isActive = true, value }: Props) => {
+     return <BoxCircle isActive={isActive}>{value}</BoxCircle>;
 };

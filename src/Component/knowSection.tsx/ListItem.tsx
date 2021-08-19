@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Subtitle, Title } from "./Know.styles";
+import { SubSubtitle, Subtitle, Title } from "./Know.styles";
 import { useTransition, animated } from "react-spring";
 
 interface Props {
@@ -90,12 +90,12 @@ export const ListItem = ({ subString, description, start, delay, scend }: Props)
               .to((item.trans) as any)
               .to(y => `translate3d(0,${y}px,0)`),
           }}>
-          <Title>{item.fig}</Title>
+          <Title >{item.fig}</Title>
         </animated.div>
       ))}
     </div>
-        <Subtitle className="uppercase text-base">{subString}</Subtitle>
-        <Subtitle className="mb-4" fw={400}>{description}</Subtitle>
+        <Subtitle>{subString}</Subtitle>
+        <SubSubtitle>{description}</SubSubtitle>
       </div>
     );
 };

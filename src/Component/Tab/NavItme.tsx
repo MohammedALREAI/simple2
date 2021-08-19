@@ -17,8 +17,9 @@ export const DataItems = ({ data }:Porps) => {
       delay: 50,
       onRest: () => set(true),
     });
+    console.log("DataItems", data);
     return transitions(
-      (styles, item) => item && <animated.div style={styles} className="  grid grid-cols-1  md:grid-cols-3 gap-4">
+      (styles, item) => item && <animated.div style={styles} className="  grid grid-cols-1  lg:grid-cols-3 gap-4">
         {data.length && data.map((x, index) => (<SimpleSection {...x} key={index}/>))}
 
       </animated.div>);

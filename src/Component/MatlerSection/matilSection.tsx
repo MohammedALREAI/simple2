@@ -15,17 +15,17 @@ export const MailSection = () => {
        onRest: () => set(true),
      });
      return (
-          <section className="container mx-auto">
+          <section className="container mx-auto px-[20px]">
 {transitions(
         (styles, item) => item &&
                <animated.div style={styles}>
                     <div className=" grid grid-cols-1 md:grid-cols-2 gap-14 bg-white-200 my-12">
                <div className="flex-col mt-12 w-4/6">
                     <HeaderTitle title={"MATERIALS"} />
-                    <TextLuxury>Luxury in every detail</TextLuxury>
-                    <TextDescription>Interior of volumes, space, air, proportion, with certain light and mood. These interiors are meant to last forever.</TextDescription>
-                    <div className="w-1/1" >
-                    <ButtonDiscover>Discover More<span className="ml-4 text-3xl"><VscArrowRight size="32px"/></span></ButtonDiscover>
+                    <TextLuxury className="lg:text-[60px] text-[45px] ">Luxury in every detail</TextLuxury>
+                    <TextDescription className="text-[20px]">Interior of volumes, space, air, proportion, with certain light and mood. These interiors are meant to last forever.</TextDescription>
+                    <div className="w-[220px] h-[60px] rounded-none">
+                    <ButtonDiscover className="">Discover More<span className="ml-[22px]"><VscArrowRight size="32px"/></span></ButtonDiscover>
                     </div>
                </div>
                <div>
