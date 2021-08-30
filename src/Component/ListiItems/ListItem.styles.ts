@@ -139,8 +139,6 @@ width: 206px;
 height : 60px;
 display: flex;
 align-items: center;
-/* background: red; */
-/* margin-bottom: 30px; */
 text-transform: uppercase;
 @media (max-width: 768px) {
     margin-bottom: 30px; 

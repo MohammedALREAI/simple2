@@ -3,18 +3,23 @@ import SwipeableViews from "react-swipeable-views";
 import { data } from "./image";
 import { ArrowsWrapper, BoxBolit, SpanBox, WrapperMe, WrapperRight } from "./Slider.style";
 import { SliderItem } from "./SliderItem";
+import { autoPlay } from "react-swipeable-views-utils";
 
 const cssStyle: CSSProperties = {
     position: "relative",
-    width: "1326px",
-    // height: "500.281px",
-    // background: "red",
+    width: "auto",
+    backgroundSize: "100% 100%",
+    objectFit: "contain",
     height: "885.281px",
     maxHeight: "885.281px",
-    maxWidth: "1326px",
+    maxWidth: "auto",
     minWidth: "1326px",
+    background: "red",
+    transition: "opacity 600ms ease-out 3ms",
 
 };
+
+const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 export const Slider = () => {
     const [sliderIndex, setSliderIndex] = useState<number>(0);
@@ -45,14 +50,36 @@ export const Slider = () => {
 
     return (
 
-        <WrapperMe className="container mx-auto mb-32   w-full bg-white">
-            <div className="h-full w-full relative">
-                <SwipeableViews index={sliderIndex} style={cssStyle}>
+        <WrapperMe className=" mb-32 mx-auto    w-full bg-white container">
+            <div className="h-full  relative w-full" style={{
+                width: "100%",
+                height: "885.281px",
+                maxHeight: "885.281px",
+                maxWidth: "auto",
+                minWidth: "1326px",
+            }}>
+                <AutoPlaySwipeableViews
+                slideStyle={{
+                        width: "100%",
+                        height: "885.281px",
+                        maxHeight: "885.281px",
+                        maxWidth: "auto",
+                        minWidth: "1326px",
+                }}
+                    direction="incremental"
+                    interval={5000}
+                    animateTransitions={false}
+                springConfig={{
+                    duration: "3.0s",
+                    delay: "3s",
+                    easeFunction: "ease-out",
+                }}
+                onChangeIndex={(index) => setSliderIndex(index)} index={sliderIndex} style={cssStyle}>
                     {sliders}
-                </SwipeableViews>
+                </AutoPlaySwipeableViews>
 
-                <WrapperRight className=" bg-gray-800" >
-                    <SpanBox className="flex justify-end items-center">BOLLING A VISIT</SpanBox>
+                <WrapperRight className="right-0" >
+                    <SpanBox className="flex justify-end items-center w-[70px]">BOLLING A VISIT</SpanBox>
                 </WrapperRight>
             </div>
             <ArrowsWrapper className="space-x-5 relative flex justify-center items-center  h-[14px]">

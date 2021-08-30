@@ -16,8 +16,8 @@ export const Progrss = ({ title, value, textshow, index }: Props) => {
       from: { opacity: 0 },
       enter: { opacity: 1 },
       reverse: false,
-      delay: 400 + index * 100,
-      config: { duration: 400 + index * 100 },
+      delay: 100 + index * 100,
+      config: { duration: 100 + index * 100 },
       onRest: () => set(true),
     });
     return (<div>

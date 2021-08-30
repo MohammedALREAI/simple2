@@ -2,18 +2,21 @@ import React, { useState, CSSProperties } from "react";
 import SwipeableViews from "react-swipeable-views";
 import { data } from "./image";
 import { SliderItemJustImage, WrapperMe } from "./Slider.style";
+import { autoPlay } from "react-swipeable-views-utils";
 
 const cssStyle: CSSProperties = {
-    position: "relative",
-    width: "100%",
-    height: "100%",
-    overflow: "hidden !important",
+        position: "relative",
+        width: "100%",
+        height: "100%",
+        overflow: "hidden !important",
 
 };
 
 interface props {
     jc?:"flex-start" | "flex-end"
 }
+const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
+
 export const SliderImage = ({ jc } : props) => {
     const [sliderIndex, setSliderIndex] = useState<number>(0);
     const handleChangeIndex = () => {
@@ -32,20 +35,31 @@ export const SliderImage = ({ jc } : props) => {
 
     const sliders =
         data.length &&
-        data.map((item, index) => (
-            <SliderItemJustImage className="overflow-hidden" imag={item.image} style={{
-                    overflow: "hidden !important",
-
-            }} />
-        ));
+        data.map((item, index) => {
+            return (
+                <SliderItemJustImage className="overflow-hidden min-h-[600px]" imag={item.image}/>
+            );
+});
 
     return (
 
-                <div className="overflow-hidden">
-                    <SwipeableViews index={sliderIndex} style={cssStyle} slideStyle={{ overflow: "hidden" }}>
-                        {sliders}
-                    </SwipeableViews>
-                    <div className=" ">
+                <div className="overflow-hidden w-full min-h-[700px]">
+                  <AutoPlaySwipeableViews
+                slideStyle={{
+                        width: "100%",
+                }}
+                    direction="incremental"
+                    interval={5000}
+                    animateTransitions={false}
+                springConfig={{
+                    duration: "3.0s",
+                    delay: "3s",
+                    easeFunction: "ease-out",
+                }}
+                onChangeIndex={(index) => setSliderIndex(index)} index={sliderIndex} style={cssStyle}>
+                    {sliders}
+                </AutoPlaySwipeableViews>
+                  <div className="mt-[20px]">
   <div className={`flex ${jc ? "justify-end" : "justify-start"} px-2 space-x-5 items-center`}>
     <div className="-rotate-180"style={{
           transform: "rotate(-180deg)",

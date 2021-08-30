@@ -27,21 +27,51 @@ const TextHero = keyframes`
   }
 `;
 
+const fadeIn = keyframes`
+  0% {
+   opacity:0;
+    }
+  
+
+
+  100% {
+   opacity:1
+  }
+
+`;
+
 export const SliderItemWrapper = styled("div")<SliderItemWrapperProps>`
 background-image: ${(props) => props.imag ? `url(${props.imag})` : ""};
 background-repeat: no-repeat;
 background-size: 100% 100%;
-width: 1326px;
 height: 885.281px;
+min-height:885.281px;
      overflow: hidden;
 object-fit: contain;
-     max-height: 885.281px;
+     /* max-height: 885.281px;
       max-width:1326px;
-      min-width:1326px;
-    transition: opacity 600ms ease-out 0s;
-  opacity: 1;
+      min-width:1326px; */
+    transition: opacity 600ms ease-out 3ms; 
+  -webkit-tap-highlight-color:transparent;
+    transform: translate3d(0, 0, 0);
+    transition: opacity 600ms ease-out 3.2ms;
+    transition-property: opacity;
+    transition-delay:300ms;
+     z-index: 998; 
+    animation: ${fadeIn} 600ms ease-out  ;
+    transition-delay:300ms;
+    width: 100%;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+
+
+    /* height: 484.469px; */
 
 `;
+
 export const SliderItemJustImage = styled("div")<SliderItemWrapperProps>`
 background-image: ${(props) => props.imag ? `url(${props.imag})` : ""};
 background-repeat: no-repeat;
@@ -51,17 +81,18 @@ background-size: 100% 100%;
     top: 0px;
     z-index: 998;
     opacity: 0;
-    height: 600px;
     transition: opacity 600ms ease-out 0s;
-width: 1326px;
+width: 100%;
  height: 600px;
- /* width:100%; */
+ width:100%;
+ /* max-height: 600px; */
+ max-height:600px;
  /* height:100%; */
 object-fit: contain;
- max-width:1326px;
-min-width:1326px;
-max-height: 885.281px; 
-
+ /* max-width:1326px; */
+/* min-width:1326px; */
+/* max-height: 885.281px;  */
+overflow-y: hidden;
     transition: opacity 600ms ease-out 0s;
   opacity: 1;
   z-index: 999
@@ -81,11 +112,11 @@ export const ArrowsWrapper = styled("div")`
 
 export const SliderTitle = styled("h2")`
 font-size: 1.067rem;
-  font-weight: 400;
-  animation: ${TextHero} 2s ease-in 1 ;
-  font-family: "Oswald", Arial, Helvetica, sans-serif;
-  line-height: 1.4;
-  text-align: start;
+font-weight: 400;
+animation: ${TextHero} 0.4ms ease-in 0.2ms ;
+font-family: "Oswald", Arial, Helvetica, sans-serif;
+line-height: 1.4;
+text-align: start;
     color: #ffffff;
     transition:all 30ms ease;
     font-family: "Vidaloka",Arial,Helvetica,sans-serif;
@@ -102,45 +133,38 @@ export const SliderSubTitle = styled(SliderTitle)`
 `;
 
 export const SpanBox = styled("span")`
-    box-shadow: 0 0 0 3em #ba9778 inset;
     color: #ffffff;  
-    transition:all 30ms ease;
+    /* transition:all 30ms ease; */
     writing-mode: vertical-rl;
   text-orientation: mixed;
-  background-color: #ba9778;
+  background:inherit;
   color: #ffffff;
   display: flex;
   font-size:18px;
-  font-weight: 500;
+  height: auto;
+  /* font-weight: 500; */
     align-items: center;
     justify-content: center;
     box-shadow: 0 0 0 3em #ba9778 inset;
     color: #ffffff;
-
-    &:hover{
-      /* animation: ${TextHero} 2s infinite; */
-
-    }
-
-    width:100%;
-height: 100%;
 writing-mode: vertical-rl;
   text-orientation: mixed;
-  background-color: #ba9778;
   color: #ffffff;
   display: flex;
-  background: red;
   align-items: center;
   justify-content: center;
   text-decoration: none;
     transition: all 200ms ease;
     &:hover{
-      animation: ${scale} 4s;
-      transition: all 200ms ease;
+      /* animation: ${scale} 4s; */
+      /* transition: all 200ms ease; */
 
 
     }
-  
+    color: #ffffff; 
+font-family: Oswald, Arial, Helvetica, sans-serif;
+font-weight: 300;
+padding:10px;
     
  `;
 
@@ -170,35 +194,31 @@ export const WrapperMe = styled("div")`
       justify-content: space-evenly;
       align-items: flex-start;
       overflow: hidden;
-      width: 100%;
+      /* width: 100%; */
       height: 885.281px;
       max-height: 882px;
-      max-width:1326px;
-      min-width:1326px;
+      /* max-width:100%; */
+      /* min-width:100%; */
        margin-top: 50px;
-       transition: opacity 600ms ease-out 0s;
+       margin: 0px  auto;
+       transition: opacity 600ms ease-out 3.2ms;
     `;
-
 export const DisscoverMore = styled("div")`
 
-
   &:hover {
-  animation: ${discoverHoverArrow} 2s ease-in 1 ;
   flex-direction:row-reverse;
-  animation: ${discoverHover} 2s ease-in 1 ;
-
+  animation: ${discoverHover} 3000ms ease-in 2;
 }
-
 `;
 export const DisscoverSpan = styled("span")`
 
 
 span:hover{
-  animation: ${discoverHoverArrow} 2s ease-in 1 ;
+  /* animation: ${discoverHoverArrow} 2s ease-in 1 ; */
 
 }
 &:hover{
-  animation: ${discoverHoverArrow} 2s ease-in 1 ;
+  /* animation: ${discoverHoverArrow} 2s ease-in 1 ; */
 }
 
 `;
@@ -210,16 +230,26 @@ writing-mode: vertical-rl;
   text-orientation: mixed;
   background-color: #ba9778;
   color: #ffffff;
-  font-size: 22px;
   font-weight: 300;
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
     transition: all 200ms ease;
-    &:hover{
-      animation: ${scale} 4s;
-      transition: all 200ms ease;
+    color: #ffffff; 
+font-family: Oswald, Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-weight: 300;
+font-weight: 400;
+height: 70px;
+line-height: 22.05px;
+margin: 0px;
+padding: 24px;
+width: 164px !important;
+
+&:hover{
+      /* animation: ${scale} 4s; */
+      /* transition: all 200ms ease; */
 
 
     }
@@ -227,7 +257,7 @@ writing-mode: vertical-rl;
 export const SubRow = styled("div")`
 display: flex;
 align-items: flex-start;
-    justify-content: space-between;
+justify-content: space-between;
     
  `;
 
@@ -245,27 +275,40 @@ border-left: 2px solid white;
   `;
 
 export const WrapperRight = styled("div")`
-width: 6rem;
-height: 200px;
+width:70px;
+height: auto;
+padding:10px 20px;
 position: absolute;
 writing-mode: vertical-rl;
   text-orientation: mixed;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 22px;
+  font-size: 18px;
+
   font-weight: 500;
-  box-shadow: 0 0 0 3em #ba9778 inset;
+  box-shadow: 0 0 0 3ms #ba9778 inset;
   position: absolute;
   top: 75%;
   min-height: 164px;
   min-width: 70px;
   z-index: 30;
   right: -0;
-  /* right:-2rem;  */
   margin: 0;
   font-weight: 300;
   letter-spacing: 1px;
   position: absolute;
-    top: 62%;
+  font-size: 18.05px;
+
+    top: 60%;
+    &:hover{
+    transition: all 300ms ease;
+    /* -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg); */
+    animation: ${scale} 300ms;
+      transition: all 200ms ease;
+
+    }
 `;

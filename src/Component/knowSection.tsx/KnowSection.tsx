@@ -15,9 +15,9 @@ export const KnowSection = (props: Props) => {
     const transitions = useTransition(show, {
       from: { opacity: 0 },
       enter: { opacity: 1 },
-      reverse: false,
-      delay: 300,
-      config: { duration: 300 },
+      reverse: true,
+      delay: 100,
+      config: { duration: 100 },
       onRest: () => set(true),
     });
     const [propgress, setPropgress] = useState(false);
@@ -25,8 +25,8 @@ export const KnowSection = (props: Props) => {
       from: { opacity: 0 },
       enter: { opacity: 1 },
       reverse: false,
-      delay: 400,
-      config: { duration: 400 },
+      delay: 100,
+      config: { duration: 100 },
       onRest: () => set(true),
     });
 
@@ -65,8 +65,8 @@ export const KnowSection = (props: Props) => {
     return (
     <WrapperImageKnow className="container  mx-auto h-auto" >
   <div className="container mx-auto grid grid-cols-1 md:grid-cols-2  pt-[150px] justify-between ">
-    <div className=" text-[#c9adad] flex flex-col px-[32px]">
-    <TextLuxury className=" text-[45px] lg:text-[66px] font-[500]">For those who know how to <span style={{ color: "#ba9778" }}>choose</span></TextLuxury>
+    <div className="flex flex-col px-[32px] text-white">
+    <TextLuxury className=" text-[45px]   lg:text-[66px] font-[500]">For those who know how to <span style={{ color: "#ba9778" }}>choose</span></TextLuxury>
     <p className="text-[14px] lg:text-[22px] font-[400]">Energy efficiency simply means using less energy to perform the same task – that is, eliminating energy waste. Energy efficiency brings a variety of benefits: reducing greenhouse gas emissions, reducing demand for energy imports.</p>
     </div>
     <div className=" flex flex-col px-12 mt-16">,

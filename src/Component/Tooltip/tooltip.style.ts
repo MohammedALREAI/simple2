@@ -82,7 +82,6 @@ width: 30px;
 };
 .tome {
   transition: all 300ms ease;
-  background: red;
 }
 ;
 .p1 {

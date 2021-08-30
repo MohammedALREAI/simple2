@@ -27,7 +27,7 @@ function Apartment() {
                     </div>
 
             </div>
-            <div className=" lg:w-2/3 sm:block right-0  md:right-[-10%]  mt-8 z-50  md:relative">
+            <div className="lg:w-2/3 sm:block right-0  md:right-[-10%]  mt-8 z-50  md:relative">
                 <SliderImage/>
         </div>
                 </div>

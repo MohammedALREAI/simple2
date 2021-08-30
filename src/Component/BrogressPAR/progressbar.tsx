@@ -28,8 +28,8 @@ export default function Progressbar() {
                     <div className="mt-8">
                         <div className="flex flex-col justify-end">
                             <p className="text-sm font-semibold leading-none text-right text-gray-500 dark:text-gray-400">80% complete</p>
-                            <div className="bg-green-50 rounded-full mt-3 h-2 w-full">
-                                <div className="bg-green-500 w-5/6 h-2 rounded-full" />
+                            <div className=" rounded-full mt-3 h-2 w-full">
+                                <div className=" w-5/6 h-2 rounded-full" />
                             </div>
                         </div>
                         <div className="flex items-center mt-5">

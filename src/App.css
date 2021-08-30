@@ -4,3 +4,25 @@
   margin: 0px;
   padding: 0px;
 }
+
+
+@media (min-width: 4280px) {
+  .container {
+    min-width:4280px;
+  }
+}
+@media (min-width: 2080px) {
+  .container {
+    min-width:2080px;
+  }
+}
+@media (min-width: 1880px) {
+  .container {
+    min-width:1880px;
+  }
+}
+
+
+.react-swipeable-view-container{
+  background: brown !important;
+}

@@ -7,9 +7,9 @@ import { DiscoverMore } from "../DiscoverMoreButtonHero/DiscoverMore";
 }
 
 export const SliderItem = ({ description, image, location }: PropsSliderItem) => (
-<SliderItemWrapper imag={image} className="z-10  flex flex-col justify-end w-full h-full bg-black" >
+<SliderItemWrapper imag={image} className="z-10  flex flex-col justify-end" >
   <SubWrapper className=" z-50 flex justify-between  pl-20 ">
-    <SubRow className="flex  w-1/3">
+    <SubRow className="flex  w-1/2">
       <div className="flex items-start">
       <HR className="pr-4"/>
     <div className="flex flex-col">

@@ -6,24 +6,45 @@ export const DiscoverButton = styled("div")`
     justify-content: space-between;
     align-content: space-between;
     align-items: center;
-font-size: 1.2rem;
-margin-right: 2em;
+    font-size: 17.1px;
+    font-weight: 300;
+    font-family: Oswald, Arial, Helvetica, sans-serif;
+    font-size: 17.1px;
+    font-weight: 300;
+    height: 17px;
+    line-height: 17.1px;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 50px;
+    
 
-color: #ffffff;
+
+
 .the-arrow {
   width: 1px;
   transition: all 0.2s;
+  font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
+font-size: 17.1px;
+font-weight: 400;
+height: 17px;
+line-height: 17.1px;
 }
 
 .the-arrow.-left {
   position: absolute;
   top: 60%;
   left: 0;
+  font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
+font-size: 17.1px;
+font-weight: 400;
+height: 17px;
+line-height: 17.1px;
 }
 
 .the-arrow.-left > .shaft {
   width: 0;
   background-color: #4c4c4c;
+  
 }
 
 .the-arrow.-left > .shaft:before,
@@ -128,7 +149,6 @@ color: #ffffff;
 .animated-arrow:hover > .the-arrow.-left > .shaft:before {
   transform: rotate(40deg);
   color: #ba9778;
-  /* background: red; */
   transition-delay: 0.1s;
 
 }
