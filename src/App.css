@@ -23,6 +23,33 @@
 }
 
 
-.react-swipeable-view-container{
-  background: brown !important;
+
+
+
+
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+     }
+   
+ 
+ 
+   100% {
+    opacity:1
+   }
+}
+
+.react-swipeable-view-container {
+transition: transform 1000ms cubic-bezier(.190,1,.220,1),fadeIn 1000ms cubic-bezier(.190,1,.220,1),fadeIn 600ms linearo;
+
+    transition-delay:200ms;
+    animation: fadeIn 600ms ease-out ;
+    transition: transform 1000ms cubic-bezier(.190,1,.220,1),fadeIn 1000ms cubic-bezier(.190,1,.220,1),fadeIn 600ms linearo;
+    transition-delay:200ms;
+    width: 100%;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
 }

@@ -14,9 +14,8 @@ const cssStyle: CSSProperties = {
     maxHeight: "885.281px",
     maxWidth: "auto",
     minWidth: "1326px",
-    background: "red",
-    transition: "opacity 600ms ease-out 3ms",
-
+    transition: "transform 1000ms cubic-bezier(.190,1,.220,1),opacity 1000ms cubic-bezier(.190,1,.220,1),opacity 600ms linearo",
+    transitionDelay: "200ms",
 };
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
@@ -50,13 +49,15 @@ export const Slider = () => {
 
     return (
 
-        <WrapperMe className=" mb-32 mx-auto    w-full bg-white container">
+        <WrapperMe className=" mb-32 mx-auto w-full bg-white container">
             <div className="h-full  relative w-full" style={{
                 width: "100%",
                 height: "885.281px",
                 maxHeight: "885.281px",
                 maxWidth: "auto",
                 minWidth: "1326px",
+                transition: "transform 1000ms cubic-bezier(.190,1,.220,1),opacity 1000ms cubic-bezier(.190,1,.220,1),opacity 600ms linearo",
+                transitionDelay: "200ms",
             }}>
                 <AutoPlaySwipeableViews
                 slideStyle={{
@@ -65,6 +66,8 @@ export const Slider = () => {
                         maxHeight: "885.281px",
                         maxWidth: "auto",
                         minWidth: "1326px",
+    transition: "transform 1000ms cubic-bezier(.190,1,.220,1),opacity 1000ms cubic-bezier(.190,1,.220,1),opacity 600ms linearo",
+                        transitionDelay: "200ms",
                 }}
                     direction="incremental"
                     interval={5000}

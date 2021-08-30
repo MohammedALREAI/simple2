@@ -18,7 +18,7 @@ const style:React.CSSProperties = {
 function Penthouse() {
     return (
             <div className="px-12 container mx-auto my-[70px]   bg-[#f1f1f1]  flex flex-col w-full h-full lg:flex-row shadow">
-            <div className=" lg:w-2/3 sm:block  md:left-[-10%] md:right-[20%]  mt-8 z-50  relative">
+            <div className=" lg:w-2/3 sm:block  md:left-[-10%] md:right-[20%]  mt-8 z-50  md:relative">
                 <SliderImage jc="flex-end"/>
         </div>
                 <div className="w-1/1 lg:w-1/2 mt-12 ">

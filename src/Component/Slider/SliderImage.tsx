@@ -37,7 +37,7 @@ export const SliderImage = ({ jc } : props) => {
         data.length &&
         data.map((item, index) => {
             return (
-                <SliderItemJustImage className="overflow-hidden min-h-[600px]" imag={item.image}/>
+                <SliderItemJustImage className="inset-0 overflow-hidden min-h-[560px] min-w-[380px] md:min-h-[600px]" imag={item.image}/>
             );
 });
 

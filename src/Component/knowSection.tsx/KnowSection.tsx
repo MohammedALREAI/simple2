@@ -63,7 +63,7 @@ export const KnowSection = (props: Props) => {
 // };
 
     return (
-    <WrapperImageKnow className="container  mx-auto h-auto" >
+    <WrapperImageKnow className="mx-0 container  h-auto" >
   <div className="container mx-auto grid grid-cols-1 md:grid-cols-2  pt-[150px] justify-between ">
     <div className="flex flex-col px-[32px] text-white">
     <TextLuxury className=" text-[45px]   lg:text-[66px] font-[500]">For those who know how to <span style={{ color: "#ba9778" }}>choose</span></TextLuxury>
@@ -80,9 +80,9 @@ export const KnowSection = (props: Props) => {
     <div className=" bg-white w-full md:w-10/12 border-t-4 border-black h-auto mt-40">
     <div className =" ml-8 md:ml-28  gap-6  grid grid-cols-2  md:grid-cols-4 py-8">
     {Array(4).fill(0).map((x, index) => (
-        <div className="container mx-auto mb-[50px] px-4 ">
+        <div className="mb-[50px] px-4">
             {transitions(
-    (styles, item) => item && <animated.div className="shadow-sm" style={styles}>
+    (styles, item) => item && <animated.div className="" style={styles}>
         <ListItem start={7} scend={2} delay={index} subString="Gallery City Center" description="Shopping Mall" />
 
     </animated.div>)}

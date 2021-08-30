@@ -46,20 +46,17 @@ background-repeat: no-repeat;
 background-size: 100% 100%;
 height: 885.281px;
 min-height:885.281px;
-     overflow: hidden;
+overflow: hidden;
 object-fit: contain;
-     /* max-height: 885.281px;
-      max-width:1326px;
-      min-width:1326px; */
     transition: opacity 600ms ease-out 3ms; 
-  -webkit-tap-highlight-color:transparent;
     transform: translate3d(0, 0, 0);
     transition: opacity 600ms ease-out 3.2ms;
     transition-property: opacity;
     transition-delay:300ms;
      z-index: 998; 
     animation: ${fadeIn} 600ms ease-out  ;
-    transition-delay:300ms;
+    transition: transform 1000ms cubic-bezier(.190,1,.220,1),opacity 1000ms cubic-bezier(.190,1,.220,1),opacity 600ms linearo;
+    transition-delay:200ms;
     width: 100%;
     -webkit-touch-callout: none;
     -khtml-user-select: none;
@@ -76,12 +73,14 @@ export const SliderItemJustImage = styled("div")<SliderItemWrapperProps>`
 background-image: ${(props) => props.imag ? `url(${props.imag})` : ""};
 background-repeat: no-repeat;
 background-size: 100% 100%;
-    position: relative;
+transition: transform 1000ms cubic-bezier(.190,1,.220,1),opacity 1000ms cubic-bezier(.190,1,.220,1),opacity 600ms linearo;
+
+    transition-delay:200ms;
+position: relative;
     left: 0px;
     top: 0px;
     z-index: 998;
     opacity: 0;
-    transition: opacity 600ms ease-out 0s;
 width: 100%;
  height: 600px;
  width:100%;
@@ -89,13 +88,18 @@ width: 100%;
  max-height:600px;
  /* height:100%; */
 object-fit: contain;
- /* max-width:1326px; */
-/* min-width:1326px; */
-/* max-height: 885.281px;  */
+
 overflow-y: hidden;
     transition: opacity 600ms ease-out 0s;
   opacity: 1;
-  z-index: 999
+  z-index: 999;
+  @media only screen and (max-width: 600px) {
+    max-width: 380px !important;
+    max-height: 560px;
+position: absolute;
+
+}
+
 
 `;
 
@@ -294,19 +298,15 @@ writing-mode: vertical-rl;
   min-width: 70px;
   z-index: 30;
   right: -0;
-  margin: 0;
   font-weight: 300;
   letter-spacing: 1px;
-  position: absolute;
   font-size: 18.05px;
-
+  box-shadow: 0 0 0 3em #ba9778 inset;
+    color: #ffffff;
     top: 60%;
     &:hover{
     transition: all 300ms ease;
-    /* -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg); */
+
     animation: ${scale} 300ms;
       transition: all 200ms ease;
 

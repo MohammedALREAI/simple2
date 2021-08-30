@@ -17,18 +17,9 @@ export const SliderItem = ({ description, image, location }: PropsSliderItem) =>
       <SliderSubTitle className="text-white text-[80px]">{description.split(" ")[0]}</SliderSubTitle>
       <SliderSubTitle className="  text-white">{description.split(" ").slice(1).join(" ") }</SliderSubTitle>
       <DiscoverMore/>
-      {/* <DisscoverMore className="text-white text-left mt-6 flex h-12 spanitem">Discover More
-       <span className=" ml-2 text-bold  w-24 h-24 text-xl text-white cursor-pointer hover:hidden">&#10141;</span>
- </DisscoverMore> */}
     </div>
 </div>
   </SubRow>
-  {/* <div className="relative left-0 justify-center  mt-16 z-50 hidden md:flex">
-<BoxBolit className="bg-gray-900 z-50">
-<SpanBox className="flex justify-end items-">BOLLING A VISIT</SpanBox>
-</BoxBolit>
-</div>  */}
-
  </SubWrapper>
 
 </SliderItemWrapper>

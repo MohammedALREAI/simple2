@@ -7,5 +7,5 @@ value:string
 }
 
 export const CircleAnimation = ({ isActive = true, value }: Props) => {
-     return <BoxCircle isActive={isActive}>{value}</BoxCircle>;
+     return <BoxCircle className="w-[40px] h-[40px] " isActive={isActive}>{value}</BoxCircle>;
 };

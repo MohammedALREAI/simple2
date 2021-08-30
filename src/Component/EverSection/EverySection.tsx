@@ -50,33 +50,11 @@ function EverySection() {
                 </div>
             </div>
             <div className="flex lg:flex-row flex-col p-12 ">
-                <ImageDiv className="w-full lg:w-4/6 h-56  md:relative ">
+                <ImageDiv className="w-full lg:w-4/6  md:relative ">
                     <Circle text="SHOPPING MALL" value={"01"} x={30} y={40} />
-
-                    {/* <div className="absolute inset-0 w-auto h-auto " style={{
-                        left: `${40}%`,
-                        top: `${30}%`,
-                    }} onClick={() => {
-                        setOne(true);
-                        setTow(false);
-                    }
-                    }>
-                        <Tooltip onClick={() => setOne(!one)} isDisplay={one} text="SHOPPING MALL" value={"01"} />
-                    </div> */}
-                    {/* <div className="absolute inset-0 w-auto h-auto " style={{
-                        left: `${60}%`,
-                        top: `${40}%`,
-                    }} onClick={() => setTow(!tow)}>
-                        <Tooltip onClick={() => setOne(true)} isDisplay={tow} text="SHOPPING MALL" value={"02"} />
-                    </div> */}
-
                 </ImageDiv>
-                <div className=" w-full lg:w-2/6" style={{ borderTop: "1px solid rgba(0,0,0,.3)" }}>
+                <div className="md:ml-[-40px]  w-full lg:w-2/6" style={{ borderTop: "1px solid rgba(0,0,0,.3)" }}>
                     <Dropdown text="Windows, skylights, vents, and glass portions of doors helps to control solar heat loss and gains runway." title="BUSINESS CENTER" value="01" />
-                    {/* <Dropdown text="Windows, skylights, vents, and glass portions of doors helps to control solar heat loss and gains runway." title="BUSINESS CENTER" value="01" /> */}
-                    {/* <Dropdown onClick={() => setOne(!one)} isOpen={one} text="Windows, skylights, vents, and glass portions of doors helps to control solar heat loss and gains runway." title="BUSINESS CENTER" value="01" />
-                    <Dropdown onClick={() => setOne(!one)} isOpen={one} text="Windows, skylights, vents, and glass portions of doors helps to control solar heat loss and gains runway." title="BUSINESS CENTER" value="01" />
-                    <Dropdown onClick={() => setOne(!one)} isOpen={one} text="Windows, skylights, vents, and glass portions of doors helps to control solar heat loss and gains runway." title="BUSINESS CENTER" value="01" /> */}
                 </div>
             </div>
         </div>
