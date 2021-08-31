@@ -13,7 +13,7 @@ const cssStyle: CSSProperties = {
     height: "885.281px",
     maxHeight: "885.281px",
     maxWidth: "auto",
-    minWidth: "1326px",
+    // minWidth: "1326px",
     transition: "transform 1000ms cubic-bezier(.190,1,.220,1),opacity 1000ms cubic-bezier(.190,1,.220,1),opacity 600ms linearo",
     transitionDelay: "200ms",
 };
@@ -55,7 +55,7 @@ export const Slider = () => {
                 height: "885.281px",
                 maxHeight: "885.281px",
                 maxWidth: "auto",
-                minWidth: "1326px",
+                // minWidth: "1326px",
                 transition: "transform 1000ms cubic-bezier(.190,1,.220,1),opacity 1000ms cubic-bezier(.190,1,.220,1),opacity 600ms linearo",
                 transitionDelay: "200ms",
             }}>
@@ -65,7 +65,7 @@ export const Slider = () => {
                         height: "885.281px",
                         maxHeight: "885.281px",
                         maxWidth: "auto",
-                        minWidth: "1326px",
+                        // minWidth: "1326px",
     transition: "transform 1000ms cubic-bezier(.190,1,.220,1),opacity 1000ms cubic-bezier(.190,1,.220,1),opacity 600ms linearo",
                         transitionDelay: "200ms",
                 }}

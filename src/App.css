@@ -39,7 +39,7 @@
    }
 }
 
-.react-swipeable-view-container {
+.slide .react-swipeable-view-container {
 transition: transform 1000ms cubic-bezier(.190,1,.220,1),fadeIn 1000ms cubic-bezier(.190,1,.220,1),fadeIn 600ms linearo;
 
     transition-delay:200ms;
